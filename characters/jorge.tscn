@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ufw0lavmx5w6"]
+
+[ext_resource type="Script" path="res://characters/jorge.gd" id="1_or2sl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y76ex"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1n5iq"]
+
+[node name="Jorge" type="CharacterBody3D"]
+script = ExtResource("1_or2sl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_y76ex")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_1n5iq")
