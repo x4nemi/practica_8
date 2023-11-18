@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://dakppnn5ti4n4"]
+
+[ext_resource type="Script" path="res://menus/menu_two.gd" id="1_5ud56"]
+[ext_resource type="Texture2D" uid="uid://c5cnm5esuhay" path="res://menus/blueee.jpg" id="1_6w682"]
+[ext_resource type="FontFile" uid="uid://dpj2rcep84pwy" path="res://menus/Minecraft.ttf" id="2_541wd"]
+
+[node name="MenuTwo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ud56")
+
+[node name="Blueee" type="Sprite2D" parent="."]
+position = Vector2(497, 278)
+rotation = 1.57044
+scale = Vector2(1.39775, 1.41279)
+texture = ExtResource("1_6w682")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.5
+offset_top = -150.5
+offset_right = 220.5
+offset_bottom = 150.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_541wd")
+theme_override_font_sizes/font_size = 50
+text = "Elige una opción:"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_541wd")
+theme_override_font_sizes/font_size = 50
+text = "Nivel 1"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_541wd")
+theme_override_font_sizes/font_size = 50
+text = "Nivel 2"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_541wd")
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_nivel1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_nivel2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_salir_pressed"]

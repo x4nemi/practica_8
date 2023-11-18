@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjc36bdddupqq"]
+
+[ext_resource type="Texture2D" uid="uid://hfx26kqop4iu" path="res://menus/yellow.jpg" id="1_clnxp"]
+[ext_resource type="Script" path="res://menus/menu_one.gd" id="1_fdnpr"]
+[ext_resource type="FontFile" uid="uid://dpj2rcep84pwy" path="res://menus/Minecraft.ttf" id="2_46nvh"]
+
+[node name="MenuOne" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fdnpr")
+
+[node name="Yellow" type="Sprite2D" parent="."]
+position = Vector2(573, 344)
+rotation = -1.57151
+scale = Vector2(1.42632, 1.62578)
+texture = ExtResource("1_clnxp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.5
+offset_top = -78.0
+offset_right = 144.5
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_46nvh")
+theme_override_font_sizes/font_size = 50
+text = "The Cube
+
+Ximena Garcia Vega
+ximena.garcia7482@alumnos.udg.mx
+
+Simulación por Computadora
+Jose Luis David Bonilla Carranza
+
+18 de noviembre, 2023"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_46nvh")
+theme_override_font_sizes/font_size = 30
+text = "Continuar"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
